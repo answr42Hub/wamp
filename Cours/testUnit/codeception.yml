@@ -1,0 +1,39 @@
+# suite config
+suites:
+    acceptance:
+        actor: AcceptanceTester
+        path: .
+        modules:
+            enabled:
+                - PhpBrowser :
+                    url: http://localhost
+                - \Helper\Acceptance
+                
+        # add Codeception\Step\Retry trait to AcceptanceTester to enable retries
+        step_decorators:
+            - Codeception\Step\ConditionalAssertion
+            - Codeception\Step\TryTo
+            - Codeception\Step\Retry
+                
+extensions:
+    enabled: [Codeception\Extension\RunFailed]
+
+params: 
+    - env
+
+gherkin:
+    contexts:
+        default:
+            - AcceptanceTester
+
+# additional paths
+paths:
+    tests: accept
+    output: accept/_output
+    data: accept/_data
+    support: accept/_support
+    envs: accept/_envs
+
+settings:
+    shuffle: false
+    lint: true

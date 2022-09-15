@@ -1,0 +1,19 @@
+{
+  "autoload": {
+    "psr-0": {
+      "": "src/"
+    }
+  },
+  "name": "vendor_name/minitestUnit",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "answr42",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}

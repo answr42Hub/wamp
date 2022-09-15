@@ -1,0 +1,5 @@
+dbdata
+.vscode
+.idea
+node_modules
+yarn.lock
